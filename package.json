@@ -6,7 +6,8 @@
   "main": "src/server.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.mjs"
+    "dev": "nodemon server.mjs",
+    "debug": "nodemon --inspect=9229 src/server.mjs"
   },
   "keywords": [],
   "author": "",
