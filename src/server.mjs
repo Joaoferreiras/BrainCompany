@@ -1,10 +1,7 @@
-import app from './app.mjs'
-
+import app from "./app.mjs"
 
 const port = 5000
 
 app.listen(port, () => {
-    console.log(` Servidor rodando na porta ${port} 🚀`);
-  });
-
-
+  console.log(` Servidor rodando na porta ${port} 🚀`)
+})
