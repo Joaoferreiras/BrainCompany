@@ -12,6 +12,9 @@ class UserController {
       admin: Yup.boolean(),
     })
 
+    if (!(await schema.isValid(request.body))) {
+      return response.status(400).json({ erro: "verifique seus dados" })
+    }
     const { name, email, password_hash, admin } = request.body
     const user = await User.create({
       id: v4(),
