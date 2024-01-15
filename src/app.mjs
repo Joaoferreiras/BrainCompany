@@ -1,5 +1,6 @@
 import express from "express"
 import routes from "./routes.mjs"
+import "./database/index.mjs"
 
 class App {
   constructor() {
