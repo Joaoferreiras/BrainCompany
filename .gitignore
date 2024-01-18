@@ -1,2 +1,2 @@
 /node_modules
-/src/config/database.cjs
+src/config/database.cjs
