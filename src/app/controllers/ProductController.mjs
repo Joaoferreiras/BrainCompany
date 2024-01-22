@@ -1,4 +1,5 @@
 import * as Yup from "yup"
+import Product from "../models/Product.mjs"
 
 class ProductController {
   async store(request, response) {
@@ -13,7 +14,17 @@ class ProductController {
     } catch (err) {
       return response.status(400).json({ error: err.errors })
     }
-    return response.status(200).json({ ok: true })
+    const [{ filename: path }] = request.files
+    const { name, price, category } = request.body
+
+    const product = await Product.create({
+      name,
+      price,
+      category,
+      path,
+    })
+
+    return response.json(product)
   }
 }
 
