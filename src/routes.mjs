@@ -11,5 +11,6 @@ const upload = multer(multerConfig)
 routes.post("/users", UserController.store)
 routes.post("/sessions", SessionController.store)
 routes.post("/products", upload.array("files"), ProductController.store)
+routes.get("/products", ProductController.index)
 
 export default routes
